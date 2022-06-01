@@ -9,13 +9,14 @@
 
 @implementation WeatherModel
 
-- (id)initWithTime:(NSString *)time City:(NSString *)city Temperature:(NSString *)temperature {
+- (id)initWithTime:(NSString *)time City:(NSString *)city Temperature:(NSString *)temperature Weather:(NSString *)info {
     self = [super init];
     
     if (self) {
         self.cityName = city;
         self.currentTemperature = temperature;
         self.updateTime = time;
+        self.weatherInfo = info;
     }
     
     return self;

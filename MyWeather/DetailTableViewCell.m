@@ -34,14 +34,14 @@
     
     // 日期
     self.date = [[UILabel alloc] init];
-    self.date.textColor = [UIColor redColor];
+    self.date.textColor = [UIColor greenColor];
     [self.date setFrame:CGRectMake(0, 30, x, 20)];
     self.date.textAlignment = NSTextAlignmentCenter;
     [self.contentView addSubview:self.date];
     
     // 天气
     self.weather = [[UILabel alloc] init];
-    self.weather.textColor = [UIColor yellowColor];
+    self.weather.textColor = [UIColor orangeColor];
     [self.weather setFrame:CGRectMake(x, 30, x, 20)];
     self.weather.textAlignment = NSTextAlignmentCenter;
     [self.contentView addSubview:self.weather];
@@ -55,7 +55,7 @@
     
     // 高温
     self.highTemperature = [[UILabel alloc] init];
-    self.highTemperature.textColor = [UIColor greenColor];
+    self.highTemperature.textColor = [UIColor redColor];
     [self.highTemperature setFrame:CGRectMake(x * 3, 30, x, 20)];
     self.highTemperature.textAlignment = NSTextAlignmentCenter;
     [self.contentView addSubview:self.highTemperature];

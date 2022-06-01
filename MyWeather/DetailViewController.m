@@ -22,32 +22,37 @@
     UILabel *label1 = [[UILabel alloc] initWithFrame:CGRectMake(10, 150, 100, 20)];
     self.windDirection = [[UILabel alloc] initWithFrame:CGRectMake(x + 10, 150, 100, 20)];
     UILabel *label2 = [[UILabel alloc] initWithFrame:CGRectMake(x * 2 + 10, 150, 100, 20)];
-    self.windSpeed = [[UILabel alloc] initWithFrame:CGRectMake(x * 3 + 10, 150, 100, 20)];
+    self.quality = [[UILabel alloc] initWithFrame:CGRectMake(x * 3 + 10, 150, 100, 20)];
     UILabel *label3 = [[UILabel alloc] initWithFrame:CGRectMake(10, 190, 100, 20)];
     self.windScale = [[UILabel alloc] initWithFrame:CGRectMake(x + 10, 190, 100, 20)];
     UILabel *label4 = [[UILabel alloc] initWithFrame:CGRectMake(x * 2 + 10, 190, 100, 20)];
     self.humidity = [[UILabel alloc] initWithFrame:CGRectMake(x * 3 + 10, 190, 100, 20)];
     UILabel *label5 = [[UILabel alloc] initWithFrame:CGRectMake(10, 230, 100, 20)];
-    self.visibility = [[UILabel alloc] initWithFrame:CGRectMake(x + 10, 230, 100, 20)];
+    self.sunrise = [[UILabel alloc] initWithFrame:CGRectMake(x + 10, 230, 100, 20)];
     UILabel *label6 = [[UILabel alloc] initWithFrame:CGRectMake(x * 2 + 10, 230, 100, 20)];
-    self.pressure = [[UILabel alloc] initWithFrame:CGRectMake(x * 3 + 10, 230, 100, 20)];
+    self.sunset = [[UILabel alloc] initWithFrame:CGRectMake(x * 3 + 10, 230, 100, 20)];
     UILabel *label7 = [[UILabel alloc] initWithFrame:CGRectMake(10, 110, 110, 20)];
     
     [label1 setText:@"风向"];
-    [label2 setText:@"风速"];
+    [label2 setText:@"空气质量"];
     [label3 setText:@"风力大小"];
     [label4 setText:@"空气湿度"];
-    [label5 setText:@"能见度"];
-    [label6 setText:@"气压"];
+    [label5 setText:@"日出"];
+    [label6 setText:@"日落"];
     [label7 setText:@"今天天气详情"];
     [label7 setBackgroundColor:[UIColor redColor]];
     [self.windDirection setText:self.detail.windDirection];
-    [self.windSpeed setText:self.detail.windSpeed];
+    [self.quality setText:self.detail.quality];
     [self.windScale setText:self.detail.windScale];
     [self.humidity setText:self.detail.humidity];
-    [self.visibility setText:self.detail.visibility];
-    [self.pressure setText:self.detail.pressure];
-
+    [self.sunrise setText:self.detail.sunrise];
+    [self.sunset setText:self.detail.sunset];
+    self.windDirection.textColor = [UIColor purpleColor];
+    self.quality.textColor = [UIColor purpleColor];
+    self.windScale.textColor = [UIColor purpleColor];
+    self.humidity.textColor = [UIColor purpleColor];
+    self.sunrise.textColor = [UIColor purpleColor];
+    self.sunset.textColor = [UIColor purpleColor];
     
     [self.view addSubview:label1];
     [self.view addSubview:label2];
@@ -57,11 +62,11 @@
     [self.view addSubview:label6];
     [self.view addSubview:label7];
     [self.view addSubview:self.windDirection];
-    [self.view addSubview:self.windSpeed];
+    [self.view addSubview:self.quality];
     [self.view addSubview:self.windScale];
     [self.view addSubview:self.humidity];
-    [self.view addSubview:self.pressure];
-    [self.view addSubview:self.visibility];
+    [self.view addSubview:self.sunset];
+    [self.view addSubview:self.sunrise];
     
     UILabel *label8 = [[UILabel alloc] initWithFrame:CGRectMake(10, 300, 110, 20)];
     UILabel *label9 = [[UILabel alloc] initWithFrame:CGRectMake(0, 340, x, 20)];
@@ -73,8 +78,8 @@
     [label8 setBackgroundColor:[UIColor redColor]];
     [label9 setText:@"日期"];
     [label10 setText:@"天气"];
-    [label11 setText:@"高温"];
-    [label12 setText:@"低温"];
+    [label11 setText:@"低温"];
+    [label12 setText:@"高温"];
     
     label9.textAlignment = NSTextAlignmentCenter;
     label10.textAlignment = NSTextAlignmentCenter;

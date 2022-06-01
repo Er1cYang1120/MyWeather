@@ -9,16 +9,16 @@
 
 @implementation DetailModel
 
-- (id)initWithWindDirection:(NSString *)direction WindSpeed:(NSString *)speed WindScale:(NSString *)scale Humidity:(NSString *)humidity Visibility:(NSString *)visibility Pressure:(NSString *)pressure {
+- (id)initWithWindDirection:(NSString *)direction Quality:(NSString *)quality WindScale:(NSString *)scale Humidity:(NSString *)humidity Sunrise:(NSString *)rise Sunset:(NSString *)set {
     self = [super init];
     
     if (self) {
         self.windDirection = direction;
-        self.windSpeed = speed;
+        self.quality = quality;
         self.windScale = scale;
         self.humidity = humidity;
-        self.visibility = visibility;
-        self.pressure = pressure;
+        self.sunrise = rise;
+        self.sunset = set;
     }
     
     return self;

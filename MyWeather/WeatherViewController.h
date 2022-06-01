@@ -19,9 +19,6 @@ NS_ASSUME_NONNULL_BEGIN
 @interface WeatherViewController : UIViewController
 
 @property(strong, nonatomic)UITableView *tableView;
-@property(strong, nonatomic)NSArray *dataArray;
-@property(strong, nonatomic)NSArray *detailArray;
-@property(strong, nonatomic)NSArray *detailTableArray;
 @property(strong, nonatomic)NSMutableArray *tableList;
 @property(strong, nonatomic)NSMutableArray *detailList;
 @property(strong, nonatomic)NSMutableArray *detailTableList;

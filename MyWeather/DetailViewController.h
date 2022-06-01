@@ -17,11 +17,11 @@ NS_ASSUME_NONNULL_BEGIN
 @interface DetailViewController : UIViewController
 
 @property(strong, nonatomic)UILabel *windDirection;
-@property(strong, nonatomic)UILabel *windSpeed;
+@property(strong, nonatomic)UILabel *quality;
 @property(strong, nonatomic)UILabel *windScale;
 @property(strong, nonatomic)UILabel *humidity;
-@property(strong, nonatomic)UILabel *visibility;
-@property(strong, nonatomic)UILabel *pressure;
+@property(strong, nonatomic)UILabel *sunrise;
+@property(strong, nonatomic)UILabel *sunset;
 @property(strong, nonatomic)UITableView *tableView;
 
 @property(strong, nonatomic)NSMutableArray *detailList;

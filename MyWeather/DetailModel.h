@@ -12,13 +12,13 @@ NS_ASSUME_NONNULL_BEGIN
 @interface DetailModel : NSObject
 
 @property(strong, nonatomic)NSString *windDirection;
-@property(strong, nonatomic)NSString *windSpeed;
+@property(strong, nonatomic)NSString *quality;
 @property(strong, nonatomic)NSString *windScale;
 @property(strong, nonatomic)NSString *humidity;
-@property(strong, nonatomic)NSString *visibility;
-@property(strong, nonatomic)NSString *pressure;
+@property(strong, nonatomic)NSString *sunrise;
+@property(strong, nonatomic)NSString *sunset;
 
-- (id)initWithWindDirection:(NSString *)direction WindSpeed:(NSString *)speed WindScale:(NSString *)scale Humidity:(NSString *)humidity Visibility:(NSString *)visibility Pressure:(NSString *)pressure;
+- (id)initWithWindDirection:(NSString *)direction Quality:(NSString *)quality WindScale:(NSString *)scale Humidity:(NSString *)humidity Sunrise:(NSString *)rise Sunset:(NSString *)set;
 
 @end
 

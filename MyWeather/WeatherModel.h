@@ -14,9 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property(strong, nonatomic)NSString *updateTime;
 @property(strong, nonatomic)NSString *cityName;
 @property(strong, nonatomic)NSString *currentTemperature;
-// pic ???
+@property(strong, nonatomic)NSString *weatherInfo;
 
-- (id)initWithTime:(NSString *)time City:(NSString *)city Temperature:(NSString *)temperature;
+- (id)initWithTime:(NSString *)time City:(NSString *)city Temperature:(NSString *)temperature Weather:(NSString *)info;
 
 @end
 
