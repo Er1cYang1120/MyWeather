@@ -17,7 +17,7 @@
 
 BOOL isDataLoaded = NO;
 NSDictionary *dict;
-int cityIndex = 0;
+int dataLoadedNum = 0;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -150,11 +150,15 @@ int cityIndex = 0;
     }
     [self.detailTableList replaceObjectAtIndex:index withObject:temp1];
     
-    // 设置数据加载标志位
-    isDataLoaded = YES;
-    
-    // 结束刷新
-    [self.tableView.mj_header endRefreshing];
+    dataLoadedNum++;
+    if (dataLoadedNum == 5) {
+        // 设置数据加载标志位
+        isDataLoaded = YES;
+        // 结束刷新
+        [self.tableView.mj_header endRefreshing];
+        // 5次请求都成功后重置标志位
+        dataLoadedNum = 0;
+    }
 }
 
 #pragma mark tableView
